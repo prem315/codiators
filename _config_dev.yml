@@ -1,65 +1,77 @@
-url: https://y7kim.github.io
-baseurl: /agency-jekyll-theme/
+title: Urban Template
+url: "https://teal-worm.cloudvent.net"
+baseurl:
+google_analytics_key:
+google_maps_javascript_api_key:
+disqus_shortname:
 
-# Site settings
-title: Awesome Title
-email: your-email@domain.com
-description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
+# Default description in social shares for the jekyll-seo-tag gem
+description: Jekyll template with example content for a web agency.
 
+# Author details for the jekyll-seo-tag gem
+author:
+  name:
+  email:
+  twitter: # twitter username without the @ symbol
 
-# Team names, titles and social links
-people:
-- name: Kay Garland
-  pic: 1
-  position: Lead Designer
-  social:
-    - title: twitter
-      url: #
-    - title: facebook
-      url: #
-    - title: stack-overflow
-      url: #
-
-- name: Larry Parker
-  pic: 2
-  position: Lead Marketer
-  social:
-    - title: twitter
-      url: #
-    - title: facebook
-      url: #
-    - title: linkedin
-      url: #
-
-- name: Diana Petersen
-  pic: 3
-  position: Lead Developer
-  social:
-    - title: twitter
-      url: #
-    - title: facebook
-      url: #
-    - title: google-plus
-      url: #
-
-# Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
+# Social details for the jekyll-seo-tag gem
 social:
-  - title: twitter
-    url: http://twitter.com/jekyllrb
-  - title: facebook
-    url:
-  - title: stack-overflow
-    url: http://stackoverflow.com/questions/tagged/jekyll
-  - title: bitbucket 
-    url: http://bitbucket.org/jekyll
-  - title: github
-    url: http://github.com/jekyll
+  name: Urban Template
+  links:
+    - https://github.com/CloudCannon/urban-jekyll-template
 
-# Postal address (add as many lines as necessary)
-address:
-  - line: 3481 Melrose Place
-  - line: Beverly Hills, CA 90210
+collections:
+  staff_members:
+    output: false
+  clients:
+    output: true
 
-# Build settings
-markdown: kramdown
+paginate: 10
+paginate_path: "/blog/:num/"
 permalink: pretty
+
+jekyll-archives:
+  enabled:
+    - "categories"
+
+gems:
+  - "jekyll-feed"
+  - "jekyll-seo-tag"
+  - "jekyll-paginate"
+  - "jekyll-archives"
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "clients"
+    values:
+      layout: "client"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  - scope:
+      path: "index.html"
+      type: "pages"
+    values:
+      layout: "default"
+
+# -----------
+# CloudCannon
+
+social_icons:
+  - Facebook
+  - Google Plus
+  - Instagram
+  - LinkedIn
+  - Pinterest
+  - Tumblr
+  - Twitter
+  - YouTube
+  - RSS
